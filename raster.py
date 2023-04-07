@@ -40,8 +40,8 @@ if __name__ == '__main__':
 
             new_param = def_params.copy()            
             new_param['c_g'] = G_costs[i]
-            #new_param['c_s'] = S_costs[j]
-            new_param['v'] = V_costs[j]
+            new_param['c_s'] = S_costs[j]
+            #new_param['v'] = V_costs[j]
 
             params.append(new_param)
 		
