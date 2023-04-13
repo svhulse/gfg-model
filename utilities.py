@@ -60,23 +60,23 @@ def mating_matrix(**kwargs):
 
     rho = kwargs['rho']
 
-    M = np.zeros((4, 16))
-    M[:, 0] = [1, 0, 0, 0]                                       #GS x GS
-    M[:, 1] = [0.5, 0.5, 0, 0]                                   #GS x Gs
-    M[:, 2] = [0.5, 0, 0.5, 0]                                   #GS x gS
-    M[:, 3] = [0.5*(1-rho), 0.5*rho, 0.5*rho, 0.5*(1-rho)]       #GS x gs
-    M[:, 4] = [0.5, 0.5, 0, 0]                                   #Gs x GS
-    M[:, 5] = [0, 1, 0, 0]                                       #Gs x Gs
-    M[:, 6] = [0.5*rho, 0.5*(1-rho), 0.5*(1-rho), 0.5*rho]       #Gs x gS
-    M[:, 7] = [0, 0.5, 0, 0.5]                                   #Gs x gs
-    M[:, 8] = [0.5, 0, 0.5, 0]                                   #gS x GS
-    M[:, 9] = [0.5*rho, 0.5*(1-rho), 0.5*(1-rho), 0.5*rho]       #gS x Gs
-    M[:, 10] = [0, 0, 1, 0]                                      #gS x gS
-    M[:, 11] = [0, 0, 0.5, 0.5]                                  #gS x gs
-    M[:, 12] = [0.5*(1-rho), 0.5*rho, 0.5*rho, 0.5*(1-rho)]      #gs X GS
-    M[:, 13] = [0, 0.5, 0, 0.5]                                  #gs x Gs
-    M[:, 14] = [0, 0, 0.5, 0.5]                                  #gs x gS
-    M[:, 15] = [0, 0, 0, 1]                                      #gs x gs
+    M = np.zeros((16, 4))
+    M[0, :] = [1, 0, 0, 0]                                       #GS x GS
+    M[1, :] = [0.5, 0.5, 0, 0]                                   #GS x Gs
+    M[2, :] = [0.5, 0, 0.5, 0]                                   #GS x gS
+    M[3, :] = [0.5*(1-rho), 0.5*rho, 0.5*rho, 0.5*(1-rho)]       #GS x gs
+    M[4, :] = [0.5, 0.5, 0, 0]                                   #Gs x GS
+    M[5, :] = [0, 1, 0, 0]                                       #Gs x Gs
+    M[6, :] = [0.5*rho, 0.5*(1-rho), 0.5*(1-rho), 0.5*rho]       #Gs x gS
+    M[7, :] = [0, 0.5, 0, 0.5]                                   #Gs x gs
+    M[8, :] = [0.5, 0, 0.5, 0]                                   #gS x GS
+    M[9, :] = [0.5*rho, 0.5*(1-rho), 0.5*(1-rho), 0.5*rho]       #gS x Gs
+    M[10, :] = [0, 0, 1, 0]                                      #gS x gS
+    M[11, :] = [0, 0, 0.5, 0.5]                                  #gS x gs
+    M[12, :] = [0.5*(1-rho), 0.5*rho, 0.5*rho, 0.5*(1-rho)]      #gs X GS
+    M[13, :] = [0, 0.5, 0, 0.5]                                  #gs x Gs
+    M[14, :] = [0, 0, 0.5, 0.5]                                  #gs x gS
+    M[15, :] = [0, 0, 0, 1]                                      #gs x gs
 
     return M
 
@@ -115,8 +115,8 @@ def get_trans(S, I, **kwargs):
     I_freq = I / np.sum(I)
     sus = np.dot(B, I_freq)
 
-    full_sib_end = np.dot(M.T, sus)
-    full_sib_for = np.dot(M.T, B[:, 2])
+    full_sib_end = np.dot(M, sus)
+    full_sib_for = np.dot(M, B[:, 2])
     full_sib_freq = freq_matrix.flatten()
 
     half_sib_end = np.average(full_sib_end.reshape(-1, 4), axis=1)
@@ -167,7 +167,7 @@ def load_data(path, var_1, var_2):
         N = np.sum(sus, axis=0)
 
         #Find the t indexes equal to the range over which to average solution
-        avg_range = (6000, 8000)
+        avg_range = (8000, 10000)
         ind_1 = np.argmin(abs(t - avg_range[0]))
         ind_2 = np.argmin(abs(t - avg_range[1]))
 

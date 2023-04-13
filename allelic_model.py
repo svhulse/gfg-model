@@ -30,7 +30,7 @@ def run_sim(**kwargs):
     I_0 = np.array(params['I_0']) #Load initial conditions for infected hosts
 
     costs = np.zeros(4)
-    costs[0] = c_g + c_s    #Costs for GS
+    costs[0] = 1-(1-c_g)*(1-c_s)    #Costs for GS
     costs[1] = c_g          #Costs for Gs
     costs[2] = c_s          #Costs for gS
     costs[3] = 0            #Costs for gs
@@ -48,9 +48,8 @@ def run_sim(**kwargs):
  
         genotype_freq = S / np.sum(S)
         pair_freq = np.outer(b*genotype_freq, genotype_freq).flatten()
-        births = np.dot(M, pair_freq)
 
-        dS = np.sum(S)*births - S*(k*N + mu + np.dot(B, I)/N)
+        dS = np.sum(S)*np.dot(pair_freq, M) - S*(k*N + mu + np.dot(B, I)/N)
         dI = I*(np.dot(B.T, S)/N - mu)
 
         X_out = np.concatenate((dS, dI))

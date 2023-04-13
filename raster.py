@@ -23,6 +23,8 @@ def_params = {  'k':0.001,      #Coefficient of density dependent growth
 
 size = 100
 
+output_path = 'Data/Mult_Costs/cov_gv_costs.p'
+
 V_costs = np.linspace(0, 0.3, size) #Range of parameters for virulence costs
 G_costs = np.linspace(0, 0.2, size) #Range of parameters for general resistance costs
 S_costs = np.linspace(0, 0.4, size) #Range of parameters for speific resistance costs
@@ -40,8 +42,8 @@ if __name__ == '__main__':
 
             new_param = def_params.copy()            
             new_param['c_g'] = G_costs[i]
-            new_param['c_s'] = S_costs[j]
-            #new_param['v'] = V_costs[j]
+            #new_param['c_s'] = S_costs[j]
+            new_param['v'] = V_costs[j]
 
             params.append(new_param)
 		
@@ -57,5 +59,5 @@ if __name__ == '__main__':
         inds = [j for j in range(len(coords)) if coords[j][1] == i]
         raster.append([results[j] for j in inds])
 
-    with open('Data/Default/cov_gv_costs.p', 'wb') as f:
+    with open(output_path, 'wb') as f:
         pkl.dump([results, params], f)
