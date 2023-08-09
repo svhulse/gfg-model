@@ -4,7 +4,7 @@ import pickle as pkl
 import multiprocessing as mp
 
 from model import Model
-from solve import run_sim
+from solve import get_sol
 
 output_path = './data/cov_gs.p'				#Output filename
 size = 100									#Raster dimension
