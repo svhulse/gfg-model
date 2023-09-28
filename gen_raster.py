@@ -7,7 +7,7 @@ import multiprocessing as mp
 from model import Model
 from solve import get_sol
 
-scenario = 'cov_gv_rho0'					#Name of raster scenario
+scenario = 'cov_gs'							#Name of raster scenario
 size = 200									#Raster dimension
 
 with open('rasters.json', 'r') as data:
@@ -40,6 +40,7 @@ if __name__ == '__main__':
 	coords = []     #x, y coordinates of each simulation in raster
 	models = []     #Empty tuple for model classes
 
+	print('Initializing Models...')
 	#Create raster of model classes for each parameter combination
 	for i in range(size):
 		for j in range(size):
@@ -54,6 +55,7 @@ if __name__ == '__main__':
 	#Run simluations for 4 core processor
 	pool = mp.Pool(processes=4)	
 	
+	print('Running Simulations...')
 	results = []
 	for result in tqdm.tqdm(pool.imap(pass_to_sim, models), total=len(models)):
 		results.append(result)

@@ -63,7 +63,7 @@
         }
     },
     "nocov_gs_rho0" :{
-        "filename"  : "./data/nocov_gs_rho0",
+        "filename"  : "./data/nocov_gs_rho0.p",
         "var_1"     : "c_g",
         "var_2"     : "c_s",
         "S_init"    : [1, 0.1, 0.1],
@@ -84,7 +84,7 @@
         }
     },
     "cov_gs_rho0" :{
-        "filename"  : "./data/nocov_gs_rho0",
+        "filename"  : "./data/cov_gs_rho0.p",
         "var_1"     : "c_g",
         "var_2"     : "c_s",
         "S_init"    : [1, 0.1, 0.1],
@@ -105,7 +105,7 @@
         }
     },
     "cov_gv_rho0" :{
-        "filename"  : "./data/nocov_gs_rho0",
+        "filename"  : "./data/cov_gv_rho0.p",
         "var_1"     : "c_g",
         "var_2"     : "v",
         "S_init"    : [1, 0.1, 0.1],
@@ -126,7 +126,7 @@
         }
     },
     "nocov_gs_rho1" :{
-        "filename"  : "./data/nocov_gs_rho1",
+        "filename"  : "./data/nocov_gs_rho1.p",
         "var_1"     : "c_g",
         "var_2"     : "c_s",
         "S_init"    : [0, 0.1, 0.1],
@@ -147,7 +147,7 @@
         }
     },
     "cov_gs_rho1" :{
-        "filename"  : "./data/nocov_gs_rho1",
+        "filename"  : "./data/cov_gs_rho1.p",
         "var_1"     : "c_g",
         "var_2"     : "c_s",
         "S_init"    : [0, 0.1, 0.1],
@@ -168,7 +168,7 @@
         }
     },
     "cov_gv_rho1" :{
-        "filename"  : "./data/nocov_gs_rho1",
+        "filename"  : "./data/cov_gv_rho1.p",
         "var_1"     : "c_g",
         "var_2"     : "v",
         "S_init"    : [0, 0.1, 0.1],
