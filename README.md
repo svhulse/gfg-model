@@ -1,6 +1,6 @@
 # Host-pathogen coevolution promotes the evolution of general, broad-spectrum resistance and reduces foreign pathogen spillover risk
 
-This repository contains the code used to generate the data referenced in our manuscipt. The code used to make each figure is also included, although most figures require several data rasters to be generated first. All of this code is written assuming the file structure of this repository.
+This repository contains the code used to generate the data referenced in our manuscipt. The code used to make each figure is also included, although most figures require several data rasters to be generated first. All of this code is written assuming the file structure of this repository. Unfortunetly, the data files themselves are too large to be stored in this repository, and must be generated on the user's end.
 
 ## Code Organisation
 
@@ -25,9 +25,7 @@ Finally, the figure scripts generate and save figures as .svg images. All figure
 
 ## Proceedure to Generate Plots
 
-### Generating Rasters
-
-To recreate the data for the manuscript, first download this repository. You will then need to use the gen_raster script to compute solution rasters. The parameter values used for all rasters are stored in the rasters.json file. This file can also be used to define additional raster scenarios. An example scenario is given below.
+To recreate the data for the manuscript, first download this repository. You will then need to use the gen_raster script to compute solution rasters. Note that gen_raster is set up to use multithreading, with a default value of 4 cores. This can be changed by altering the processes value at line 56. The parameter values used for all rasters are stored in the rasters.json file. This file can also be used to define additional raster scenarios. An example scenario is given below.
 
 ```
 "cov_gs" : {
