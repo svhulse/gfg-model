@@ -1,5 +1,3 @@
-import numpy as np
-
 from utilities import load_data
 from matplotlib import pyplot as plt
 

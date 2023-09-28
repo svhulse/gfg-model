@@ -1,9 +1,8 @@
 import numpy as np
-import matplotlib
 
 from utilities import check_stab
 from matplotlib import pyplot as plt
-import matplotlib.patches as mpatches
+from matplotlib import patches as mpatches
 
 import style
 from style import label_axes

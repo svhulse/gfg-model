@@ -1,7 +1,7 @@
 import numpy as np
 
 from model import Model
-from solve_exp import run_sim
+from solve import run_sim
 from utilities import get_trans
 from model import collapse_locus
 
