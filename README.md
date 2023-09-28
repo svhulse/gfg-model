@@ -69,7 +69,7 @@ To generate a raster, set the scenario value to the name of the raster scenario 
 Raster scenarios and the raster size can be specified from the command line by running the code as so:
 
 ```
-python gen_raster cov_gs 200
+python gen_raster.py cov_gs 200
 ```
 
 Where the first argument is the name of the scenario and the second is the size. If no size is provided, a default value of 200 will be used.

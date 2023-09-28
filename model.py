@@ -23,6 +23,7 @@ class Model:
 		self.g = 0.3			#Default strength of general resistance
 		self.s = 0.9			#Default strength of specific resistance
 		self.v = 0.2			#Default cost of virulence
+		self.nh = 0				#Nonhost resistance
 
 		self.c_g = 0.1			#Default cost of general resistance
 		self.c_s = 0.2			#Default cost of specific resistance
@@ -37,12 +38,16 @@ class Model:
 		self.M = self.mating_matrix()
 
 	def cost_vector(self):
+		'''
+		Define the cost vector, where C[i] is the total fecundity cost for genotype i,
+		assuming multiplicitive interactions between loci
+
+		Returns:
+			C: Cost vector
+		'''
+
 		allele_costs = [0, self.c_g, self.c_s]
 
-		#Additive costs
-		#C = 1 - np.dot(self.G, costs)
-
-		#Multiplicitive costs
 		costs = self.G * allele_costs
 
 		C = np.ones(self.G.shape[0])
@@ -60,10 +65,12 @@ class Model:
 			B: Transmission matrix
 		'''
 		
+		#Define transmission matrix and apply nonhost resistance
+		B = np.ones((self.S_genotypes, self.I_genotypes)) * self.beta
+		B[:,2] = B[:,2]*(1-self.nh)
+
 		#Soft selection
 		if self.sel == 'soft':
-			B = np.ones((self.S_genotypes, self.I_genotypes)) * self.beta
-
 			for i, host in enumerate(self.G):
 				#Apply general resistance to all pathogen types
 				if host[1] == 1:
@@ -79,8 +86,6 @@ class Model:
 
 		#Hard selection
 		if self.sel == 'hard':
-			B = np.ones((self.S_genotypes, self.I_genotypes)) * self.beta
-
 			B[:,1] = B[:,1] * (1-self.v)
 
 			for i, host in enumerate(self.G):
