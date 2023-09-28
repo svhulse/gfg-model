@@ -25,7 +25,14 @@ Finally, the figure scripts generate and save figures as .svg images. All figure
 
 ## Proceedure to Generate Plots
 
-To recreate the data for the manuscript, first download this repository. You will then need to use the gen_raster script to compute solution rasters. Note that gen_raster is set up to use multithreading, with a default value of 4 cores. This can be changed by altering the processes value at line 56. The parameter values used for all rasters are stored in the rasters.json file. This file can also be used to define additional raster scenarios. An example scenario is given below.
+To recreate the data for the manuscript, the proceedure is:
+* Download this repository
+* Run the gen_raster.py script with the desired scenarios
+* Run the figure desired figure scripts
+
+While many figures used saved raster files, Fig. 1 only uses individual simulations and can be run without generating rasters. 
+
+Note that gen_raster is set up to use multithreading, with a default value of 4 cores. This can be changed by altering the processes value at line 56. The parameter values used for all rasters are stored in the rasters.json file. This file can also be used to define additional raster scenarios. An example scenario is given below.
 
 ```
 "cov_gs" : {
