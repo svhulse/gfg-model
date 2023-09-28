@@ -1,6 +1,6 @@
 # Code for Host-pathogen coevolution promotes the evolution of general, broad-spectrum resistance and reduces foreign pathogen spillover risk
 
-Preprint availible here: https://www.biorxiv.org/content/10.1101/2023.08.04.548430v1.full.pdf
+## Preprint availible here: https://www.biorxiv.org/content/10.1101/2023.08.04.548430v1.full.pdf
 
 All the data referenced in the manuscipt comes from the code provided here. There are four python files principally used.
 
@@ -13,7 +13,7 @@ gen_raster.py is used to create a 2D raster of simulations. The parameters varie
 
 utilities.py contains helper functions, mostly used to unpack and analyse the output from gen_raster. It also contains the code needed to calculate the transitivity slope for a particular equilibrium.
 
-The parameters used for each raster scenario are stored in rasters.json, the possible scenarios are
+### The parameters used for each raster scenario are stored in rasters.json, the given scenarios are described below:
 
 nocov_gs: No coevolution, fixed intermediate recombination, varied costs of general and specific resistance
 
