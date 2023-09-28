@@ -1,8 +1,8 @@
 # Code for Host-pathogen coevolution promotes the evolution of general, broad-spectrum resistance and reduces foreign pathogen spillover risk
 
-## Preprint availible here: https://www.biorxiv.org/content/10.1101/2023.08.04.548430v1.full.pdf
+This repository contains the code used data referenced in the manuscipt comes from the code provided here. There are four python files principally used.
 
-All the data referenced in the manuscipt comes from the code provided here. There are four python files principally used.
+## Preprint availible here: https://www.biorxiv.org/content/10.1101/2023.08.04.548430v1.full.pdf
 
 model.py is used to create a class instance which stores all the parameter values for a particular model.
 This class structure is also used to calculate the mating matrix and transmission matrix.
