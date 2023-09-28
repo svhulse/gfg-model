@@ -40,7 +40,7 @@ def run_sim(model, S_0, I_0, t=(0,5000)):
 		return X_out
 
 	X_0 = np.append(S_0, I_0)
-	sol = solve_ivp(df, t, X_0, method='DOP853')
+	sol = solve_ivp(df, t, X_0, method='DOP853', max_step=0.5)
 
 	S = sol.y[:model.S_genotypes, :]
 	I = sol.y[model.S_genotypes:, :]

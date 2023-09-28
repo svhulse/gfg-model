@@ -12,3 +12,29 @@ solve.py is where the ODE model is defined, and the numerical solving performed.
 gen_raster.py is used to create a 2D raster of simulations. The parameters varied along the x and y axes can be set to any parameter, as well as the range of values each parameter takes. Once computed, gen_raster saves the output to a .pkl file
 
 utilities.py contains helper functions, mostly used to unpack and analyse the output from gen_raster. It also contains the code needed to calculate the transitivity slope for a particular equilibrium.
+
+The parameters used for each raster scenario are stored in rasters.json, the possible scenarios are
+
+nocov_gs: No coevolution, fixed intermediate recombination, varied costs of general and specific resistance
+cov_gs: Coevolution, fixed intermediate recombination, varied costs of general and specific resistance
+cov_gv: Coevolution, fixed intermediate recombination, varied costs of general resistance and virulence costs
+
+nocov_gs_rho0: No coevolution, variable recombination with allele fixed for linkage modifier, varied costs of general and specific resistance
+cov_gs_rho0: Coevolution, variable recombination with allele fixed for linkage modifier, varied costs of general and specific resistance
+cov_gv_rho0: Coevolution, variable recombination with allele fixed for linkage modifier, varied costs of general resistance and virulence costs
+
+nocov_gs_rho1: No coevolution, variable recombination with loss of linkage modifier, varied costs of general and specific resistance
+cov_gs_rho1: Coevolution, variable recombination with loss of linkage modifier, varied costs of general and specific resistance
+cov_gv_rho1: Coevolution, variable recombination with loss of linkage modifier, varied costs of general resistance and virulence costs
+
+nocov_gs_hr: No coevolution, fixed high recombination, varied costs of general and specific resistance
+cov_gs_hr: Coevolution, fixed high recombination, varied costs of general and specific resistance
+cov_gv_hr: Coevolution, fixed high recombination, varied costs of general resistance and virulence costs
+
+nocov_gs_hs: No coevolution, fixed intermediate recombination, varied costs of general and specific resistance, hard selection model
+cov_gs_hs: Coevolution, fixed intermediate recombination, varied costs of general and specific resistance, hard selection model
+cov_gv_hs: Coevolution, fixed intermediate recombination, varied costs of general resistance and virulence costs, hard selection model
+
+nocov_gs_sg: No coevolution, fixed intermediate recombination, varied costs of general and specific resistance, strong general resistance
+cov_gs_sg: Coevolution, fixed intermediate recombination, varied costs of general and specific resistance, strong general resistance
+cov_gv_sg: Coevolution, fixed intermediate recombination, varied costs of general resistance and virulence costs, strong general resistance
