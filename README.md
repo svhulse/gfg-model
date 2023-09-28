@@ -61,20 +61,13 @@ To generate a raster, set the scenario value to the name of the raster scenario 
 
 To make each figure, you will need to generate the following rasters:
 
-**Figure 2**: nocov_gs, cov_gs, cov_gv
-
-**Figure 3**: nocov_gs_rho0, cov_gs_rho0
-
-**Figure 4**: cov_gs, cov_gs_rho0
-
-**Figure 5**: cov_gs_rho0, cov_gs_rho1
-
-**Figure S1**: nocov_gs, cov_gs, cov_gv
-
-**Figure S2**: cov_gs_rho1, cov_gv_rho1, cov_gs_rho0, cov_gv_rho0
-
-**Figure S3**: cov_gs, cov_gv
-
+**Figure 2**: nocov_gs, cov_gs, cov_gv\
+**Figure 3**: nocov_gs_rho0, cov_gs_rho0\
+**Figure 4**: cov_gs, cov_gs_rho0\
+**Figure 5**: cov_gs_rho0, cov_gs_rho1\
+**Figure S1**: nocov_gs, cov_gs, cov_gv\
+**Figure S2**: cov_gs_rho1, cov_gv_rho1, cov_gs_rho0, cov_gv_rho0\
+**Figure S3**: cov_gs, cov_gv\
 **Figure S4**: all scenarios listed below
 
 Once all necesary rasters are made, you should be able to run the figure scripts, which will save the images to the figures folder.
