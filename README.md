@@ -28,30 +28,34 @@ Finally, the figure scripts generate and save figures as .svg images. All figure
 To recreate the data for the manuscript, first download this repository. You will then need to use the gen_raster script to compute solution rasters. The parameter values used for all rasters are stored in the rasters.json file. This file can also be used to define additional raster scenarios. An example scenario is given below.
 
 ```
-    "nocov_gs" : {
-        "filename"  : "./data/nocov_gs.p",
-        "var_1"     : "c_g",
-        "var_2"     : "c_s",
-        "S_init"    : [1, 0.1, 0.1],
-        "I_init"    : 1,
-        "params"    : {
-            "k":0.001,
-			"mu":0.2,
-			"b":1,
-			"beta":0.5,
-			"nh":0.1,
-			"g":0.3,
-			"s":0.9,
-			"rho":[0.05, 0.05],
-			"c_g":0.1,
-			"c_s":0.2,
-			"v":0.2,						
-			"sel":"soft"
-        }
-    },
+"cov_gs" : {
+    "filename"  : "./data/cov_gs.p",
+    "var_1"     : "c_g",
+    "var_2"     : "c_s",
+    "S_init"    : [1, 0.1, 0.1],
+    "I_init"    : 0.9,
+    "params"    : {
+        "k":0.001,
+		"mu":0.2,
+		"b":1,
+		"beta":0.5,
+		"nh":0.1,
+		"g":0.3,
+		"s":0.9,
+		"rho":[0.05, 0.05],
+		"c_g":0.1,
+		"c_s":0.2,
+		"v":0.2,						
+		"sel":"soft"
+    }
+},
 ```
 
-Here, the first line defines the name of the scenario, var_1 refers to the the parameter which will be varied along the x-axis, and var_2 refers to the variable that will be varied along the y-axis. S_init and I_init define the initial allele frequencies for the host and pathogen respectively. For the host, the first number is the frequency of the linkage modifer allele, the second is the general resistance allele and the third is the specific resistance allele.
+Here, the first line defines the name of the scenario, var_1 refers to the the parameter which will be varied along the x-axis, and var_2 refers to the variable that will be varied along the y-axis.
+
+S_init and I_init define the initial allele frequencies for the host and pathogen respectively. For the host, the first number is the frequency of the linkage modifer allele, the second is the general resistance allele and the third is the specific resistance allele. I_init refers to the initial frequency of the Avr genotype.
+
+Finally, the values in the params list correspond to the simulation parameters in the Model class. For the recombination rate, rho[0] is the recombination rate with the linkage modifier, and rho[1] is the recombination rate without.
 
 ## The parameters used for each raster scenario are stored in rasters.json, the given scenarios are described below:
 
