@@ -27,7 +27,7 @@ Finally, the figure scripts generate and save figures as .svg images. All figure
 
 To recreate the data for the manuscript, first download this repository. You will then need to use the gen_raster script to compute solution rasters. The parameter values used for all rasters are stored in the rasters.json file. This file can also be used to define additional raster scenarios. An example scenario is given below.
 
-'''
+```
     "nocov_gs" : {
         "filename"  : "./data/nocov_gs.p",
         "var_1"     : "c_g",
@@ -49,7 +49,7 @@ To recreate the data for the manuscript, first download this repository. You wil
 			"sel":"soft"
         }
     },
-'''
+```
 
 Here, the first line defines the name of the scenario, var_1 refers to the the parameter which will be varied along the x-axis, and var_2 refers to the variable that will be varied along the y-axis. S_init and I_init define the initial allele frequencies for the host and pathogen respectively. For the host, the first number is the frequency of the linkage modifer allele, the second is the general resistance allele and the third is the specific resistance allele.
 
