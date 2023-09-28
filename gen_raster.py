@@ -1,41 +1,40 @@
 import numpy as np
 import tqdm
+import json 
 import pickle as pkl
 import multiprocessing as mp
 
 from model import Model
 from solve import get_sol
 
-output_path = './data/cov_gs.p'				#Output filename
-size = 100									#Raster dimension
+scenario = 'cov_gv_rho0'					#Name of raster scenario
+size = 200									#Raster dimension
 
-var_1 = 'c_g'								#First parameter rastered
-var_2 = 'c_s'								#Second parameter rastered
+with open('rasters.json', 'r') as data:
+	param_set = json.load(data)[scenario]
 
-S_init = [0, 0.1, 0.5]						#Initial host allele frequencies (Recomb, General, Specific)
-I_init = 0.9								#Avr proportion
+output_path = param_set['filename']			#Output filename
 
-params = {  'k':0.001,						#Coefficient of density dependent growth
-			'mu':0.2,						#Deathrate
-			'b':1,							#Birthrate
-			'beta':0.5,						#Baseline transmission rate
-			'nh':0.1,						#Nonhost transmission rate
-			'g':0.3,						#Strength of general resistance
-			's':0.9,						#Strength of specific resistance
-			'rho':[0.05, 0.05],				#Recombination rate for each allele
-			'c_g':0.1,						#Cost of general resistance
-			'c_s':0.2,						#Cost of specific resistance
-			'v':0.2,
-			'sel':'soft'}					#Cost of virulence      
+var_1 = param_set['var_1']					#First parameter rastered
+var_2 = param_set['var_2']					#Second parameter rastered
 
+'''
+Range of values for raster variables, too vary something other than v, c_g, or c_s, you 
+will need to add a new range array and add it to the vars dict below
+'''
 V_costs = np.linspace(0, 0.3, size)			#Range of parameters for virulence costs
 G_costs = np.linspace(0, 0.2, size)			#Range of parameters for general resistance costs
 S_costs = np.linspace(0, 0.4, size)			#Range of parameters for speific resistance costs
 
+S_init = param_set['S_init']				#Initial host allele frequencies (Recomb, General, Specific)
+I_init = param_set['I_init']				#Initial proportion of the Avr pathogen genotype
+
+params = param_set['params']
+
 vars = {'c_g': G_costs, 'c_s': S_costs, 'v': V_costs}
 
 def pass_to_sim(model):
-	return run_sim(model, S_init, I_init)
+	return get_sol(model, S_init, I_init)
 
 if __name__ == '__main__':
 	coords = []     #x, y coordinates of each simulation in raster

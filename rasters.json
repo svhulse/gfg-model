@@ -1,0 +1,380 @@
+{
+    "nocov_gs" : {
+        "filename"  : "./data/nocov_gs.p",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 1,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0.05],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "cov_gs" : {
+        "filename"  : "./data/cov_gs.p",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0.05],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "cov_gv" : {
+        "filename"  : "./data/cov_gv.p",
+        "var_1"     : "c_g",
+        "var_2"     : "v",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0.05],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "nocov_gs_rho0" :{
+        "filename"  : "./data/nocov_gs_rho0",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 1,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "cov_gs_rho0" :{
+        "filename"  : "./data/nocov_gs_rho0",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "cov_gv_rho0" :{
+        "filename"  : "./data/nocov_gs_rho0",
+        "var_1"     : "c_g",
+        "var_2"     : "v",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "nocov_gs_rho1" :{
+        "filename"  : "./data/nocov_gs_rho1",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [0, 0.1, 0.1],
+        "I_init"    : 1,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "cov_gs_rho1" :{
+        "filename"  : "./data/nocov_gs_rho1",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [0, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "cov_gv_rho1" :{
+        "filename"  : "./data/nocov_gs_rho1",
+        "var_1"     : "c_g",
+        "var_2"     : "v",
+        "S_init"    : [0, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "nocov_gs_hr" : {
+        "filename"  : "./data/nocov_gs_hr.p",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 1,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.5, 0.5],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "cov_gs_hr" : {
+        "filename"  : "./data/cov_gs_hr.p",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.5, 0.5],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "cov_gv_hr" : {
+        "filename"  : "./data/cov_gv_hr.p",
+        "var_1"     : "c_g",
+        "var_2"     : "v",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.5, 0.5],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "nocov_gs_hs" : {
+        "filename"  : "./data/nocov_gs_hs.p",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 1,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0.05],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"hard"
+        }
+    },
+    "cov_gs_hs" : {
+        "filename"  : "./data/cov_gs_hs.p",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0.05],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"hard"
+        }
+    },
+    "cov_gv_hs" : {
+        "filename"  : "./data/cov_gv_hs.p",
+        "var_1"     : "c_g",
+        "var_2"     : "v",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.3,
+			"s":0.9,
+			"rho":[0.05, 0.05],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"hard"
+        }
+    },
+    "nocov_gs_sg" : {
+        "filename"  : "./data/nocov_gs_sg.p",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 1,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.5,
+			"s":0.9,
+			"rho":[0.05, 0.05],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "cov_gs_sg" : {
+        "filename"  : "./data/cov_gs_sg.p",
+        "var_1"     : "c_g",
+        "var_2"     : "c_s",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.5,
+			"s":0.9,
+			"rho":[0.05, 0.05],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    },
+    "cov_gv_sg" : {
+        "filename"  : "./data/cov_gv_sg.p",
+        "var_1"     : "c_g",
+        "var_2"     : "v",
+        "S_init"    : [1, 0.1, 0.1],
+        "I_init"    : 0.9,
+        "params"    : {
+            "k":0.001,
+			"mu":0.2,
+			"b":1,
+			"beta":0.5,
+			"nh":0.1,
+			"g":0.5,
+			"s":0.9,
+			"rho":[0.05, 0.05],
+			"c_g":0.1,
+			"c_s":0.2,
+			"v":0.2,						
+			"sel":"soft"
+        }
+    }
+}

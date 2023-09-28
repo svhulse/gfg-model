@@ -131,7 +131,6 @@ def check_stab(path, var_1, var_2):
 		if np.prod(np.real(eigs[:-1]) < 0):
 			stab[x_ind, y_ind] = 1
 		else:
-			print(np.real(eigs))
 			stab[x_ind, y_ind] = 0
 
 	return stab
