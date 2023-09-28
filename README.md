@@ -32,7 +32,7 @@ To recreate the data for the manuscript, the proceedure is:
 
 While many figures used saved raster files, Fig. 1 only uses individual simulations and can be run without generating rasters. 
 
-Note that gen_raster is set up to use multithreading, with a default value of 4 cores. This can be changed by altering the processes value at line 56. The parameter values used for all rasters are stored in the rasters.json file. This file can also be used to define additional raster scenarios. An example scenario is given below.
+Note that gen_raster is set up to use multithreading, with a default value of 4 cores. This can be changed by altering the cores value at line 20. The parameter values used for all rasters are stored in the rasters.json file. This file can also be used to define additional raster scenarios. An example scenario is given below.
 
 ```
 "cov_gs" : {
@@ -66,6 +66,14 @@ Finally, the values in the params list correspond to the simulation parameters i
 
 To generate a raster, set the scenario value to the name of the raster scenario desired.
 
+Raster scenarios and the raster size can be specified from the command line by running the code as so:
+
+```
+python gen_raster cov_gs 200
+```
+
+Where the first argument is the name of the scenario and the second is the size. If no size is provided, a default value of 200 will be used.
+
 To make each figure, you will need to generate the following rasters:
 
 **Figure 2**: nocov_gs, cov_gs, cov_gv\
@@ -80,8 +88,6 @@ To make each figure, you will need to generate the following rasters:
 Once all necesary rasters are made, you should be able to run the figure scripts, which will save the images to the figures folder.
 
 ### Predefined Scenarios
-The parameters used for each raster scenario are stored in rasters.json, the given scenarios are described below:
-
 **nocov_gs:** no coevolution, fixed intermediate recombination, varied costs of general and specific resistance\
 **cov_gs:** coevolution, fixed intermediate recombination, varied costs of general and specific resistance\
 **cov_gv:** coevolution, fixed intermediate recombination, varied costs of general resistance and virulence costs\

@@ -1,5 +1,6 @@
 import numpy as np
 import tqdm
+import sys
 import json 
 import pickle as pkl
 import multiprocessing as mp
@@ -7,8 +8,16 @@ import multiprocessing as mp
 from model import Model
 from solve import get_sol
 
-scenario = 'cov_gs'							#Name of raster scenario
-size = 200									#Raster dimension
+if len(sys.argv) == 2:
+	scenario = sys.argv[1]
+elif len(sys.argv) == 3:
+	scenario = sys.argv[1]
+	size = int(sys.argv[2])
+else:
+	scenario = 'cov_gs'			#Name of raster scenario
+	size = 200					#Raster dimension
+
+cores = 4						#Number of CPU cores
 
 with open('rasters.json', 'r') as data:
 	param_set = json.load(data)[scenario]
@@ -53,7 +62,7 @@ if __name__ == '__main__':
 			models.append(new_model)
 		
 	#Run simluations for 4 core processor
-	pool = mp.Pool(processes=4)	
+	pool = mp.Pool(processes=cores)	
 	
 	print('Running Simulations...')
 	results = []
