@@ -25,6 +25,8 @@ Finally, the figure scripts generate and save figures as .svg images. All figure
 
 ## Proceedure to Generate Plots
 
+### Generating Rasters
+
 To recreate the data for the manuscript, first download this repository. You will then need to use the gen_raster script to compute solution rasters. The parameter values used for all rasters are stored in the rasters.json file. This file can also be used to define additional raster scenarios. An example scenario is given below.
 
 ```
