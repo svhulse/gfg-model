@@ -43,17 +43,17 @@ Note that gen_raster is set up to use multithreading, with a default value of 4 
     "I_init"    : 0.9,
     "params"    : {
         "k":0.001,
-		"mu":0.2,
-		"b":1,
-		"beta":0.5,
-		"nh":0.1,
-		"g":0.3,
-		"s":0.9,
-		"rho":[0.05, 0.05],
-		"c_g":0.1,
-		"c_s":0.2,
-		"v":0.2,						
-		"sel":"soft"
+	"mu":0.2,
+	"b":1,
+	"beta":0.5,
+	"nh":0.1,
+	"g":0.3,
+	"s":0.9,
+	"rho":[0.05, 0.05],
+	"c_g":0.1,
+	"c_s":0.2,
+	"v":0.2,						
+	"sel":"soft"
     }
 },
 ```
@@ -62,7 +62,7 @@ Here, the first line defines the name of the scenario, `var_1` refers to the par
 
 `S_init` and `I_init` define the initial allele frequencies for the host and pathogen respectively. For the host, the first number is the frequency of the linkage modifier allele, the second is the general resistance allele and the third is the specific resistance allele. `I_init` refers to the initial frequency of the *Avr* genotype.
 
-Finally, the values in the params list correspond to the simulation parameters in the Model class. For the recombination rate, `rho[0]` is the recombination rate with the linkage modifier, and `rho[1]` is the recombination rate without.
+Finally, the values in the params list correspond to the simulation parameters in the Model class. For the recombination rate, `rho[0]` is the recombination rate with the linkage modifier, and `rho[1]` is the recombination rate without. For a detailed description of all parameters, please see the manuscript.
 
 To generate a raster, set the scenario value to the name of the raster scenario desired. Raster scenarios, as defined in `rasters.json` and the raster size can be specified from the command line by running the code as follows:
 
