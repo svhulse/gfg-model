@@ -9,7 +9,10 @@ The code used to generate data consists of `model.py`, `solve.py`, and `gen_rast
 `model.py` is used to create a class instance which stores all the parameter values for a particular model.
 This class structure is also used to calculate the mating matrix and transmission matrix.
 
-`solve.py` is where the ODE model is defined, and the numerical solving performed. It takes a model object as an input, as well as initial conditions, and outputs solutions. This code contains two methods: `get_sol`, which returns equilibrium points, and `run_sim`, which returns trajectories. It takes in Model class objects to store the parameters for each simulation.
+`solve.py` is where the ODE model is defined, and the numerical solving performed. It takes a model object as an input, as well as initial conditions, and outputs solutions. This code contains two methods: 
+* `get_sol`, which returns equilibrium points\
+* `run_sim`, which returns trajectories.\
+Both methods take in Model class objects to store the parameters for each simulation.
 
 `gen_raster.py` is used to create a 2D raster of simulations. The parameters varied along the x and y axes can be set to any parameter, as well as the range of values each parameter takes. Once computed, `gen_raster` saves the output to a .p file
 
