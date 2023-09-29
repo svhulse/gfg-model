@@ -88,21 +88,21 @@ To make each figure, you will need to generate the following rasters:
 Once all necessary rasters are made, you should be able to run the figure scripts, which will save the images to the figures folder.
 
 ### Predefined Scenarios
-**nocov_gs:** no coevolution, fixed intermediate recombination, varied costs of general and specific resistance\
-**cov_gs:** coevolution, fixed intermediate recombination, varied costs of general and specific resistance\
-**cov_gv:** coevolution, fixed intermediate recombination, varied costs of general resistance and virulence costs\
-**nocov_gs_rho0:** no coevolution, variable recombination with allele fixed for linkage modifier, varied costs of general and specific resistance\
-**cov_gs_rho0:** coevolution, variable recombination with allele fixed for linkage modifier, varied costs of general and specific resistance\
-**cov_gv_rho0:** coevolution, variable recombination with allele fixed for linkage modifier, varied costs of general resistance and virulence costs\
-**nocov_gs_rho1:** no coevolution, variable recombination with loss of linkage modifier, varied costs of general and specific resistance\
-**cov_gs_rho1:** coevolution, variable recombination with loss of linkage modifier, varied costs of general and specific resistance\
-**cov_gv_rho1:** coevolution, variable recombination with loss of linkage modifier, varied costs of general resistance and virulence costs\
-**nocov_gs_hr:** no coevolution, fixed high recombination, varied costs of general and specific resistance\
-**cov_gs_hr:** coevolution, fixed high recombination, varied costs of general and specific resistance\
-**cov_gv_hr:** coevolution, fixed high recombination, varied costs of general resistance and virulence costs\
-**nocov_gs_hs:** no coevolution, fixed intermediate recombination, varied costs of general and specific resistance, hard selection model\
-**cov_gs_hs:** coevolution, fixed intermediate recombination, varied costs of general and specific resistance, hard selection model\
-**cov_gv_hs:** coevolution, fixed intermediate recombination, varied costs of general resistance and virulence costs, hard selection model\
-**nocov_gs_sg:** no coevolution, fixed intermediate recombination, varied costs of general and specific resistance, strong general resistance\
-**cov_gs_sg:** coevolution, fixed intermediate recombination, varied costs of general and specific resistance, strong general resistance\
-**cov_gv_sg:** coevolution, fixed intermediate recombination, varied costs of general resistance and virulence costs, strong general resistance
+`nocov_gs`: no coevolution, fixed intermediate recombination, varied costs of general and specific resistance\
+`cov_gs`: coevolution, fixed intermediate recombination, varied costs of general and specific resistance\
+`cov_gv`: coevolution, fixed intermediate recombination, varied costs of general resistance and virulence costs\
+`nocov_gs_rho0`: no coevolution, variable recombination with allele fixed for linkage modifier, varied costs of general and specific resistance\
+`cov_gs_rho0`: coevolution, variable recombination with allele fixed for linkage modifier, varied costs of general and specific resistance\
+`cov_gv_rho0`: coevolution, variable recombination with allele fixed for linkage modifier, varied costs of general resistance and virulence costs\
+`nocov_gs_rho1`: no coevolution, variable recombination with loss of linkage modifier, varied costs of general and specific resistance\
+`cov_gs_rho1`: coevolution, variable recombination with loss of linkage modifier, varied costs of general and specific resistance\
+`cov_gv_rho1`: coevolution, variable recombination with loss of linkage modifier, varied costs of general resistance and virulence costs\
+`nocov_gs_hr`: no coevolution, fixed high recombination, varied costs of general and specific resistance\
+`cov_gs_hr`: coevolution, fixed high recombination, varied costs of general and specific resistance\
+`cov_gv_hr`: coevolution, fixed high recombination, varied costs of general resistance and virulence costs\
+`nocov_gs_hs`: no coevolution, fixed intermediate recombination, varied costs of general and specific resistance, hard selection model\
+`cov_gs_hs`: coevolution, fixed intermediate recombination, varied costs of general and specific resistance, hard selection model\
+`cov_gv_hs`: coevolution, fixed intermediate recombination, varied costs of general resistance and virulence costs, hard selection model\
+`nocov_gs_sg`: no coevolution, fixed intermediate recombination, varied costs of general and specific resistance, strong general resistance\
+`cov_gs_sg`: coevolution, fixed intermediate recombination, varied costs of general and specific resistance, strong general resistance\
+`cov_gv_sg`: coevolution, fixed intermediate recombination, varied costs of general resistance and virulence costs, strong general resistance
