@@ -11,8 +11,8 @@ This class structure is also used to calculate the mating matrix and transmissio
 
 `solve.py` is where the ODE model is defined, and the numerical solving performed. It takes a model object as an input, as well as initial conditions, and outputs solutions. This code contains two methods: 
 
-* `get_sol`, which returns equilibrium points
-* `run_sim`, which returns trajectories.
+* `get_sol` returns equilibrium points.
+* `run_sim` returns trajectories.
 
 `gen_raster.py` is used to create a 2D raster of simulations. The parameters varied along the x and y axes can be set to any parameter, as well as the range of values each parameter takes. Once computed, `gen_raster` saves the output to a .p file
 
