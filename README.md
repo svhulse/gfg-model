@@ -4,7 +4,7 @@ This repository contains the code used to generate the data referenced in our ma
 
 ## Code Organization
 
-The code used to generate data consists of model.py, solve.py, and gen_raster.py.
+The code used to generate data consists of `model.py`, `solve.py`, and `gen_raster.py`.
 
 `model.py` is used to create a class instance which stores all the parameter values for a particular model.
 This class structure is also used to calculate the mating matrix and transmission matrix.
@@ -60,11 +60,11 @@ Note that gen_raster is set up to use multithreading, with a default value of 4 
 
 Here, the first line defines the name of the scenario, `var_1` refers to the parameter which will be varied along the x-axis, and `var_2` refers to the variable that will be varied along the y-axis.
 
-S_init and I_init define the initial allele frequencies for the host and pathogen respectively. For the host, the first number is the frequency of the linkage modifier allele, the second is the general resistance allele and the third is the specific resistance allele. I_init refers to the initial frequency of the Avr genotype.
+`S_init` and `I_init` define the initial allele frequencies for the host and pathogen respectively. For the host, the first number is the frequency of the linkage modifier allele, the second is the general resistance allele and the third is the specific resistance allele. `I_init` refers to the initial frequency of the *Avr* genotype.
 
 Finally, the values in the params list correspond to the simulation parameters in the Model class. For the recombination rate, `rho[0]` is the recombination rate with the linkage modifier, and `rho[1]` is the recombination rate without.
 
-To generate a raster, set the scenario value to the name of the raster scenario desired. Raster scenarios and the raster size can be specified from the command line by running the code as follows:
+To generate a raster, set the scenario value to the name of the raster scenario desired. Raster scenarios, as defined in `rasters.json` and the raster size can be specified from the command line by running the code as follows:
 
 ```
 python gen_raster.py cov_gs 200
