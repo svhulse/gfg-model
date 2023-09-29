@@ -1,6 +1,6 @@
 # Host-pathogen coevolution promotes the evolution of general, broad-spectrum resistance and reduces foreign pathogen spillover risk
 
-This repository contains the code used to generate the data referenced in our manuscipt. The code used to make each figure is also included, although most figures require several data rasters to be generated first. All of this code is written assuming the file structure of this repository. Unfortunetly, the data files themselves are too large to be stored in this repository, and must be generated on the user's end.
+This repository contains the code used to generate the data referenced in our manuscript. The code used to make each figure is also included, although most figures require several data rasters to be generated first. All of this code is written assuming the file structure of this repository. Unfortunately, the data files themselves are too large to be stored in this repository, and must be generated on the user's end.
 
 ## Code Organisation
 
@@ -15,9 +15,9 @@ gen_raster.py is used to create a 2D raster of simulations. The parameters varie
 
 ## Plotting Scripts
 
-The other code in this repository is used for analysing and plotting, and includes utilities.py, style.py, fig_1.py,...,fig_S4.py.
+The other code in this repository is used for analyzing and plotting, and includes utilities.py, style.py, fig_1.py,...,fig_S4.py.
 
-utilities.py contains helper functions, mostly used to unpack and analyse the output from gen_raster. It also contains the code needed to calculate the transitivity slope for a particular equilibrium.
+utilities.py contains helper functions, mostly used to unpack and analyze the output from gen_raster. It also contains the code needed to calculate the transitivity slope for a particular equilibrium.
 
 style.py defines the graphics themes used for all plots.
 
@@ -25,7 +25,7 @@ Finally, the figure scripts generate and save figures as .svg images. All figure
 
 ## Proceedure to Generate Plots
 
-To recreate the data for the manuscript, the proceedure is:
+To recreate the data for the manuscript, the procedure is:
 * Download this repository
 * Run the gen_raster.py script with the desired scenarios
 * Run the figure desired figure scripts
@@ -58,9 +58,9 @@ Note that gen_raster is set up to use multithreading, with a default value of 4 
 },
 ```
 
-Here, the first line defines the name of the scenario, var_1 refers to the the parameter which will be varied along the x-axis, and var_2 refers to the variable that will be varied along the y-axis.
+Here, the first line defines the name of the scenario, var_1 refers to the parameter which will be varied along the x-axis, and var_2 refers to the variable that will be varied along the y-axis.
 
-S_init and I_init define the initial allele frequencies for the host and pathogen respectively. For the host, the first number is the frequency of the linkage modifer allele, the second is the general resistance allele and the third is the specific resistance allele. I_init refers to the initial frequency of the Avr genotype.
+S_init and I_init define the initial allele frequencies for the host and pathogen respectively. For the host, the first number is the frequency of the linkage modifier allele, the second is the general resistance allele and the third is the specific resistance allele. I_init refers to the initial frequency of the Avr genotype.
 
 Finally, the values in the params list correspond to the simulation parameters in the Model class. For the recombination rate, rho[0] is the recombination rate with the linkage modifier, and rho[1] is the recombination rate without.
 
@@ -85,7 +85,7 @@ To make each figure, you will need to generate the following rasters:
 **Figure S3**: cov_gs, cov_gv\
 **Figure S4**: all scenarios listed below
 
-Once all necesary rasters are made, you should be able to run the figure scripts, which will save the images to the figures folder.
+Once all necessary rasters are made, you should be able to run the figure scripts, which will save the images to the figures folder.
 
 ### Predefined Scenarios
 **nocov_gs:** no coevolution, fixed intermediate recombination, varied costs of general and specific resistance\
