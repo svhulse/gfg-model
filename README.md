@@ -6,20 +6,20 @@ This repository contains the code used to generate the data referenced in our ma
 
 The code used to generate data consists of model.py, solve.py, and gen_raster.py.
 
-model.py is used to create a class instance which stores all the parameter values for a particular model.
+`model.py` is used to create a class instance which stores all the parameter values for a particular model.
 This class structure is also used to calculate the mating matrix and transmission matrix.
 
-solve.py is where the ODE model is defined, and the numerical solving performed. It takes a model object as an input, as well as initial conditions, and outputs solutions. This code contains two methods: get_sol, which returns equilibrium points, and run_sim, which returns trajectories. It takes in Model class objects to store the parameters for each simulation.
+`solve.py` is where the ODE model is defined, and the numerical solving performed. It takes a model object as an input, as well as initial conditions, and outputs solutions. This code contains two methods: get_sol, which returns equilibrium points, and run_sim, which returns trajectories. It takes in Model class objects to store the parameters for each simulation.
 
-gen_raster.py is used to create a 2D raster of simulations. The parameters varied along the x and y axes can be set to any parameter, as well as the range of values each parameter takes. Once computed, gen_raster saves the output to a .p file
+`gen_raster.py` is used to create a 2D raster of simulations. The parameters varied along the x and y axes can be set to any parameter, as well as the range of values each parameter takes. Once computed, gen_raster saves the output to a .p file
 
 ## Plotting Scripts
 
-The other code in this repository is used for analyzing and plotting, and includes utilities.py, style.py, fig_1.py,...,fig_S4.py.
+The other code in this repository is used for analyzing and plotting, and includes `utilities.py`, `style.py`, `fig_1.py`,...,`fig_S4.py`.
 
-utilities.py contains helper functions, mostly used to unpack, and analyze the output from gen_raster. It also contains the code needed to calculate the transitivity slope for a particular equilibrium.
+`utilities.py` contains helper functions, mostly used to unpack, and analyze the output from gen_raster. It also contains the code needed to calculate the transitivity slope for a particular equilibrium.
 
-style.py defines the graphics themes used for all plots.
+`style.py` defines the graphics themes used for all plots.
 
 Finally, the figure scripts generate and save figures as .svg images. All figures that display data rasters require the data to be generated prior to running the script.
 
@@ -58,11 +58,11 @@ Note that gen_raster is set up to use multithreading, with a default value of 4 
 },
 ```
 
-Here, the first line defines the name of the scenario, var_1 refers to the parameter which will be varied along the x-axis, and var_2 refers to the variable that will be varied along the y-axis.
+Here, the first line defines the name of the scenario, `var_1` refers to the parameter which will be varied along the x-axis, and `var_2` refers to the variable that will be varied along the y-axis.
 
 S_init and I_init define the initial allele frequencies for the host and pathogen respectively. For the host, the first number is the frequency of the linkage modifier allele, the second is the general resistance allele and the third is the specific resistance allele. I_init refers to the initial frequency of the Avr genotype.
 
-Finally, the values in the params list correspond to the simulation parameters in the Model class. For the recombination rate, rho[0] is the recombination rate with the linkage modifier, and rho[1] is the recombination rate without.
+Finally, the values in the params list correspond to the simulation parameters in the Model class. For the recombination rate, `rho[0]` is the recombination rate with the linkage modifier, and `rho[1]` is the recombination rate without.
 
 To generate a raster, set the scenario value to the name of the raster scenario desired.
 
