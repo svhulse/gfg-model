@@ -2,7 +2,7 @@
 
 This repository contains the code used to generate the data referenced in our manuscript. The code used to make each figure is also included, although most figures require several data rasters to be generated first. All of this code is written assuming the file structure of this repository. Unfortunately, the data files themselves are too large to be stored in this repository, and must be generated on the user's end.
 
-## Code Organisation
+## Code Organization
 
 The code used to generate data consists of model.py, solve.py, and gen_raster.py.
 
@@ -17,13 +17,13 @@ gen_raster.py is used to create a 2D raster of simulations. The parameters varie
 
 The other code in this repository is used for analyzing and plotting, and includes utilities.py, style.py, fig_1.py,...,fig_S4.py.
 
-utilities.py contains helper functions, mostly used to unpack and analyze the output from gen_raster. It also contains the code needed to calculate the transitivity slope for a particular equilibrium.
+utilities.py contains helper functions, mostly used to unpack, and analyze the output from gen_raster. It also contains the code needed to calculate the transitivity slope for a particular equilibrium.
 
 style.py defines the graphics themes used for all plots.
 
 Finally, the figure scripts generate and save figures as .svg images. All figures that display data rasters require the data to be generated prior to running the script.
 
-## Proceedure to Generate Plots
+## Procedure to Generate Plots
 
 To recreate the data for the manuscript, the procedure is:
 * Download this repository
