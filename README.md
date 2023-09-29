@@ -1,6 +1,6 @@
 # Host-pathogen coevolution promotes the evolution of general, broad-spectrum resistance and reduces foreign pathogen spillover risk
 
-This repository contains the code used to generate the data referenced in our manuscript. The code used to make each figure is also included, although most figures require several data rasters to be generated first. All of this code is written assuming the file structure of this repository. Unfortunately, the data files themselves are too large to be stored in this repository, and only low-resolution data for main-text figures is provided in this repository. Higher resolution raster will need to be generated on the user's end.
+This repository contains the code used to generate the data referenced in our manuscript. The code used to make each figure is also included, although most figures require several data rasters to be generated first. All of this code is written assuming the file structure of this repository. Unfortunately, the data files themselves are too large to be stored in this repository, and only low-resolution data for main-text figures is provided here. Higher resolution raster will need to be generated on the user's end.
 
 ## Code Organization
 
