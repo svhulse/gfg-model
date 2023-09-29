@@ -11,8 +11,9 @@ This class structure is also used to calculate the mating matrix and transmissio
 
 `solve.py` is where the ODE model is defined, and the numerical solving performed. It takes a model object as an input, as well as initial conditions, and outputs solutions. This code contains two methods: 
 
-* `get_sol`, which returns equilibrium points\
-* `run_sim`, which returns trajectories.\
+* `get_sol`, which returns equilibrium points
+* `run_sim`, which returns trajectories.
+  
 Both methods take in Model class objects to store the parameters for each simulation.
 
 `gen_raster.py` is used to create a 2D raster of simulations. The parameters varied along the x and y axes can be set to any parameter, as well as the range of values each parameter takes. Once computed, `gen_raster` saves the output to a .p file
@@ -21,7 +22,11 @@ Both methods take in Model class objects to store the parameters for each simula
 
 The other code in this repository is used for analyzing and plotting, and includes `utilities.py`, `style.py`, `fig_1.py`,...,`fig_S4.py`.
 
-`utilities.py` contains helper functions, mostly used to unpack, and analyze the output from gen_raster. It also contains the code needed to calculate the transitivity slope for a particular equilibrium. It contains three methods: get_trans, load_data, and check stab. `get_trans` inputs a model and equilibrium values, and returns transitivity information. `load_data` takes a raster of simulations as an input and returns formatted data for making figures. Finally, `check_stab` takes a raster of simulations and returns a raster showing whether or not equilibria are asymptotically stable.
+`utilities.py` contains helper functions, mostly used to unpack, and analyze the output from gen_raster. It also contains the code needed to calculate the transitivity slope for a particular equilibrium. It contains three methods: get_trans, load_data, and check stab. 
+
+* `get_trans` inputs a model and equilibrium values, and returns transitivity information. 
+* `load_data` takes a raster of simulations as an input and returns formatted data for making figures.
+* `check_stab` takes a raster of simulations and returns a raster showing whether or not equilibria are asymptotically stable.
 
 `style.py` defines the graphics themes used for all plots.
 
