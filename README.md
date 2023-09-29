@@ -64,9 +64,7 @@ S_init and I_init define the initial allele frequencies for the host and pathoge
 
 Finally, the values in the params list correspond to the simulation parameters in the Model class. For the recombination rate, `rho[0]` is the recombination rate with the linkage modifier, and `rho[1]` is the recombination rate without.
 
-To generate a raster, set the scenario value to the name of the raster scenario desired.
-
-Raster scenarios and the raster size can be specified from the command line by running the code as so:
+To generate a raster, set the scenario value to the name of the raster scenario desired. Raster scenarios and the raster size can be specified from the command line by running the code as follows:
 
 ```
 python gen_raster.py cov_gs 200
